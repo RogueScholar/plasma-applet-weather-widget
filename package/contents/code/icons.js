@@ -1,5 +1,5 @@
 var WeatherFont = {
-    
+
     // https://erikflowers.github.io/weather-icons/
     codeByName: {
         'wi-day-sunny': '\uf00d',
@@ -49,7 +49,7 @@ var WeatherFont = {
         'wi-hail': '\uf015',
         'wi-sunset': '\uf052'
     },
-    
+
     iconNameByYrNoCode: {
          '1': ['wi-day-sunny', 'wi-night-clear'],
          '2': ['wi-day-sunny-overcast', 'wi-night-partly-cloudy'],
@@ -93,7 +93,7 @@ var WeatherFont = {
         '49': ['wi-snow', 'wi-snow'], //TODO used Snow
         '50': ['wi-snow', 'wi-snow']  //TODO used Snow
     },
-    
+
     // http://bugs.openweathermap.org/projects/api/wiki/Weather_Condition_Codes
     iconNameByOwmCode: {
         '200': ['wi-storm-showers', 'wi-storm-showers'],
@@ -106,7 +106,7 @@ var WeatherFont = {
         '230': ['wi-storm-showers', 'wi-storm-showers'],
         '231': ['wi-storm-showers', 'wi-storm-showers'],
         '232': ['wi-storm-showers', 'wi-storm-showers'],
-        
+
         '300': ['wi-sprinkle', 'wi-sprinkle'],
         '301': ['wi-sprinkle', 'wi-sprinkle'],
         '302': ['wi-sprinkle', 'wi-sprinkle'],
@@ -116,7 +116,7 @@ var WeatherFont = {
         '313': ['wi-sprinkle', 'wi-sprinkle'],
         '314': ['wi-sprinkle', 'wi-sprinkle'],
         '321': ['wi-sprinkle', 'wi-sprinkle'],
-        
+
         '500': ['wi-showers', 'wi-showers'],
         '501': ['wi-rain', 'wi-rain'],
         '502': ['wi-rain', 'wi-rain'],
@@ -127,7 +127,7 @@ var WeatherFont = {
         '521': ['wi-rain', 'wi-rain'],
         '522': ['wi-rain', 'wi-rain'],
         '531': ['wi-rain', 'wi-rain'],
-        
+
         '600': ['wi-snow', 'wi-snow'],
         '601': ['wi-snow', 'wi-snow'],
         '602': ['wi-snow', 'wi-snow'],
@@ -138,7 +138,7 @@ var WeatherFont = {
         '620': ['wi-rain-mix', 'wi-rain-mix'],
         '621': ['wi-rain-mix', 'wi-rain-mix'],
         '622': ['wi-rain-mix', 'wi-rain-mix'],
-        
+
         '701': ['wi-fog', 'wi-fog'],
         '711': ['wi-smoke', 'wi-smoke'],
         '721': ['wi-fog', 'wi-fog'],
@@ -149,13 +149,13 @@ var WeatherFont = {
         '762': ['wi-volcano', 'wi-volcano'],
         '771': ['wi-strong-wind', 'wi-strong-wind'],
         '781': ['wi-tornado', 'wi-tornado'],
-        
+
         '800': ['wi-day-sunny', 'wi-night-clear'],
         '801': ['wi-day-sunny-overcast', 'wi-night-partly-cloudy'],
         '802': ['wi-day-cloudy', 'wi-night-cloudy'],
         '803': ['wi-cloudy', 'wi-cloudy'],
         '804': ['wi-cloudy', 'wi-cloudy'],
-        
+
         '900': ['wi-tornado', 'wi-tornado'],
         '901': ['wi-windy', 'wi-windy'],
         '902': ['wi-hurricane', 'wi-hurricane'],
@@ -163,7 +163,7 @@ var WeatherFont = {
         '904': ['wi-hot', 'wi-hot'],
         '905': ['wi-windy', 'wi-windy'],
         '906': ['wi-hail', 'wi-hail'],
-        
+
         // TODO better understand and fill proper icons
         '950': ['wi-sunset', 'wi-sunset'],
         '951': ['wi-day-sunny', 'wi-night-clear'],

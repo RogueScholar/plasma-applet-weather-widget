@@ -380,7 +380,7 @@ Item {
     }
 
     function getCreditLabel(placeIdentifier) {
-        return 'Weather forecast from yr.no, delivered by the Norwegian Meteorological Institute and the NRK'
+        return 'Weather forecast from yr.no, delivered by the NMI and the NRK'
     }
 
     function getCreditLink(placeIdentifier) {
