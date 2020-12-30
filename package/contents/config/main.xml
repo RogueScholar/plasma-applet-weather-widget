@@ -15,7 +15,7 @@
         <entry name="reloadIntervalMin" type="Int">
             <default>60</default>
         </entry>
-        
+
         <entry name="xmlCacheJson" type="String">
             <default></default>
         </entry>
@@ -23,7 +23,7 @@
             <default></default>
         </entry>
     </group>
-    
+
     <group name="Appearance">
         <entry name="renderMeteogram" type="Bool">
             <default>false</default>
@@ -43,7 +43,7 @@
             <default>100</default>
         </entry>
     </group>
-    
+
     <group name="Units">
         <entry name="temperatureType" type="Enum">
             <choices>

@@ -24,37 +24,37 @@ import "../code/unit-utils.js" as UnitUtils
 
 Item {
     id: compactItem
-    
+
     anchors.fill: parent
-    
+
     property bool inTray
     property int layoutType: inTray ? 2 : main.layoutType
 
     readonly property int fontSize: plasmoid.configuration.fontSize
-    
+
     property double parentWidth: parent.width
     property double parentHeight: parent.height
-    
+
     property double partRatio: layoutType === 2 ? 1 : (4 / 3)
-    
+
     property double partWidth: 0
     property double partHeight: 0
-    
+
     property double widgetWidth: 0
     property double widgetHeight: 0
-    
+
     onParentWidthChanged: {
         computeWidgetSize()
     }
-    
+
     onParentHeightChanged: {
         computeWidgetSize()
     }
-    
+
     onLayoutTypeChanged: {
         computeWidgetSize()
     }
-    
+
     function computeWidgetSize() {
         if (layoutType === 0) {
             partWidth = vertical ? (parentWidth / 2) : parentHeight * partRatio
@@ -73,50 +73,50 @@ Item {
             widgetHeight = partHeight
         }
     }
-    
-    
+
+
     property double fontPixelSize: partHeight * (layoutType === 2 ? 0.7 : 0.7) * fontSize / 100
-    
+
     property string iconNameStr:    actualWeatherModel.count > 0 ? IconTools.getIconCode(actualWeatherModel.get(0).iconName, currentProvider.providerId, getPartOfDayIndex()) : ''
     property string temperatureStr: actualWeatherModel.count > 0 ? UnitUtils.getTemperatureNumberExt(actualWeatherModel.get(0).temperature, temperatureType) : ''
-    
+
     PlasmaComponents.Label {
-        
+
         width: partWidth
         height: partHeight
-        
+
         anchors.left: parent.left
         anchors.leftMargin: layoutType === 0 ? partWidth : 0
         anchors.top: parent.top
         anchors.topMargin: layoutType === 1 ? partHeight : 0
-        
+
         horizontalAlignment: layoutType === 2 ? Text.AlignLeft : Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         fontSizeMode: layoutType === 2 ? Text.Fit : Text.FixedSize
-        
+
         font.family: 'weathericons'
         text: iconNameStr
-        
+
         opacity: layoutType === 2 ? 0.8 : 1
-        
+
         font.pixelSize: fontPixelSize
         font.pointSize: -1
     }
-    
+
     PlasmaComponents.Label {
         id: temperatureText
-        
+
         width: partWidth
         height: partHeight
-        
+
         horizontalAlignment: layoutType === 1 ? Text.AlignHCenter : Text.AlignRight
         verticalAlignment: layoutType === 2 ? Text.AlignBottom : Text.AlignVCenter
-        
+
         text: temperatureStr
         font.pixelSize: fontPixelSize * (layoutType === 2 ? 0.5 : (temperatureType !== UnitUtils.TemperatureType.CELSIUS ? 6/7 : 1))
         font.pointSize: -1
     }
-    
+
     DropShadow {
         anchors.fill: temperatureText
         radius: 3
@@ -127,30 +127,30 @@ Item {
         source: temperatureText
         visible: layoutType === 2
     }
-    
+
     PlasmaComponents.BusyIndicator {
         id: busyIndicator
         anchors.fill: parent
         visible: false
         running: false
     }
-    
+
     states: [
         State {
             name: 'loading'
             when: loadingData
-            
+
             PropertyChanges {
                 target: busyIndicator
                 visible: true
                 running: true
             }
-            
+
             PropertyChanges {
                 target: compactItem
                 opacity: 0.5
             }
         }
     ]
-    
+
 }
